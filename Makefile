@@ -1,4 +1,3 @@
-CC = cproc
 
 build: itoa.o
 
