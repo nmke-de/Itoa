@@ -1,6 +1,6 @@
 # Itoa
 
-**Itoa** is a C procedure that takes an integer number and a base (between 2 and 16) and returns a string that contains the number to the base that was given.
+**Itoa** is a C procedure that takes an integer number and a base (between 2 and ~~16~~ 36) and returns a string that contains the number to the base that was given.
 
 ## But why?
 
