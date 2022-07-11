@@ -5,10 +5,10 @@
  * Released under GPLv3.
 */
 // It's actually C, if you ask me.
-char* itoa(int value, char* result, int base) {
+char* itoa(int val, int base) {
 	// check that the base if valid
-	if (base < 2 || base > 36) { *result = '\0'; return result; }
-
+	if (base < 2 || base > 36) return "";
+	static char result[32] = {0};
 	char* ptr = result, *ptr1 = result, tmp_char;
 	int tmp_value;
 
