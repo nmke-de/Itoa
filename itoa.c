@@ -10,16 +10,16 @@ char* itoa(int val, int base) {
 	if (base < 2 || base > 36) return "";
 	static char result[32] = {0};
 	char* ptr = result, *ptr1 = result, tmp_char;
-	int tmp_value;
+	int tmp_val;
 
 	do {
-		tmp_value = value;
-		value /= base;
-		*ptr++ = "zyxwvutsrqponmlkjihgfedcba9876543210123456789abcdefghijklmnopqrstuvwxyz" [35 + (tmp_value - value * base)];
-	} while ( value );
+		tmp_val = val;
+		val /= base;
+		*ptr++ = "zyxwvutsrqponmlkjihgfedcba9876543210123456789abcdefghijklmnopqrstuvwxyz" [35 + (tmp_val - val * base)];
+	} while ( val );
 
 	// Apply negative sign
-	if (tmp_value < 0) *ptr++ = '-';
+	if (tmp_val < 0) *ptr++ = '-';
 	*ptr-- = '\0';
 	while(ptr1 < ptr) {
 		tmp_char = *ptr;
